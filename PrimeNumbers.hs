@@ -1,4 +1,4 @@
---Nosagie Asaolu
+----Nosagie Asaolu
 
 --maps a list of integers to their squares  
 squareAll :: (Num a) => [a] -> [a]
