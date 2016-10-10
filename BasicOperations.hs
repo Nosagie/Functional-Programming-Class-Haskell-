@@ -1,4 +1,4 @@
-{-Nosagie Asaolu *Functional Programming  *Pset 1-}
+--Nosagie Asaolu *Functional Programming 
 
 --calculates the number of items in a list of Integers
 myLength :: [Integer] -> Integer
