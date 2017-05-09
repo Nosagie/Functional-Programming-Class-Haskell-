@@ -1,0 +1,35 @@
+The main goal of this week was to refresh myself on concepts and get a feel for available libraries
+
+
+Hour 1 - Understanding IO,Data Structures, and Monads in Haskell
+Revisited IO operations in Haskell, goal was to get user input (as URL) and
+return raw html to screen. Reviewed Data Structures and Monads to store results
+
+Hour 2 - Haskell Network.HTTP Library
+Looked at Haskell's Network.HTTP library for making HTTP requests and getting server responses.
+Successfully read HTTP response of user entered url using fmap and IO operations
+
+Hour 3 - Implementing Crude Searching without Parsing
+Implemented function that searches url for search term entered by user. Successfully 
+returns true or false if term is contained in the page
+
+Hour 4 - Explore HTML parsing libraries in Haskell
+Looked at the TagSoup Html parsing library in Haskell. Sucessfully returned tags of raw 
+html text retrieved in previous text
+
+Hour 5 - Exploring Parsec
+Wrote simple HTTP request parser in parsec using Applicatives. Successfully parsed headers
+returned by HTTP requests
+
+Hour 6 - Exploring the Haskell Shpider Library
+Exploring Haskell shpider package for web automation.  Wrote simple form parser using shpider,
+however, this library is too high level and would make project implementation trivial. 
+
+
+Hour 7 - Managing Errors and defining datatypes
+Created browser datatype and encapsulated error generating code in "Maybe" blocks. Read on Haskell Regex libraries in order 
+to get links from raw html
+
+Hour 8 - Conclusion and next steps
+Rather than use a library, I'd use regex to parse out links from raw html webpages. Began construction of
+spider datatype to continuously fetch raw htmls and automatically follow links given a starting url.

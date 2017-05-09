@@ -1,0 +1,48 @@
+Objective - Make a crawler/scraper that recusively follows links on pages and displays iterative result
+
+Hour 1 
+Read on the Haskell Browser library and implemented a Browser Datatype.
+Browser succefully abstracts previosly implemented scraper methods
+
+Hour 2 
+Used the $! operator to combine IO types. Implemented goto method
+that recursively fetches links from urls using aforementioned operator.
+
+Hour 3
+Expanded regex query to find match urls of the from (.com.***). 
+Recursive matcher successfully returns IO list that is displayed on Screen  
+
+Hours 4-5
+Refactored code to not include Browser datatype. Changed IO dependencies to allow for 
+combinations of Monads. Read up on FoldM from the Control.Monad library. Began application 
+of FoldM to allow for the combination of IO strings from the goto method.
+
+Hours 5 - 6
+FoldM method not used, realized the $! operator is combunes Monads. Encountered bug - the goto method
+successfully builds a list of urls but this is not being returned to the caller function (initscrape).
+Attempted different refactoring of the goto method including foldM. Began abstracting the search method 
+to be performed on items returned.
+
+Hours 7 - 8
+Met with George to discuss project as Zale is no longer part of the group. Discussed mutual challenges and
+decided to continue implementing the search function for returned links. Met with Pete and implemented the 
+extract Links and Crawl Page functions. The former is Recursive and the latter Monadic
+
+Hours 9 - 10
+Implemented the Crawler at last, began adding support for iterative recursiveness. Implemented CheckValid method
+to search page contents for terms. Also implemented a "generateContains" method which returns links of pages containing
+a search term and the results of the CheckValid method. Incorporated methods in to scraper. Successfully tested crawler for one iteration.
+
+Hours 11 - 12 
+Read, and used, the ScopedTypeVariables tag to convert IO String input to an integer to limit crawler recusrsion cycles. Began recursive
+abstraction of crawler method. Successfully implemented recursive abstraction. Noticed bug in regex matcher that generates the same links.
+Banging head against the wall trying to fix it.
+
+Hours 13 - 14
+Noticed different crawler method does not print results when wrapped in caller function, two bugs and counting. Realized error was with regex parser, commenced to finding adequate html parsing library as an alternative. Successfully returned webpage titles using the TagSoup library. Spent 30 minutes celebrating.
+
+Hours 14 - 15
+Decided to use HXT instead and learn about Arrows. Successfully parses href values from raw html. Problem is that it works too well as I have to add domains and remove invalid links. Successfully parsed and now getting correct links!!
+
+Hours 15 - 16 - Conclusion 
+The HXT library allows me to abstract code relating to fetching page content with Http. Hence, I created an alternate crawler that uses the HXT library, and one that uses regex. DONE! This was enjoyable in a self destructive way :D
