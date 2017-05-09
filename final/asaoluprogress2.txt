@@ -1,0 +1,28 @@
+The main goal of this week was to implement a HTML Parser using the TagSoup Library, and use Regex to get links from html Page
+
+Hour 1 - Understanding TagSoup Docs and Basic HTML Parsing
+Read Hackage docs on TagSoup - implemented html parser that returns text in html "body" tag as entered by user.
+Generalised above to return text in tags as specified by user. 
+
+Hour 2 - Regular Expressions in Haskell
+Read on Haskell Posix class for regular expressions. Used regular expressions (pattern matching) to extract
+links from raw html page.
+
+Hour 3 - Basic Recursive Scraper to get links
+Succesfully retrieves list of links from html source code. Began implementation of method
+to recursively fetch html source in aforementioned links
+
+Hour 4 - Trying to implement Recursive Spider
+Spider unable to work with IO objects, however, succesfully implemented basic url redirection. Rereading material on IO and do blocks to circumvent error
+
+Hour 5 - Troubles with IO and Monads
+Recursive Spider method proved futile. Re-read material on fmap as an alternative.
+
+Hour 6 - Fmap 
+Used fmap to map list of urs to list of html source codes. Used "nub" method to remove duplicate links
+
+Hour 7 - Planning and Roadblock
+Stuck on how to recursively check links against search term using Networks.Http library. Began designing application 
+flow for spider datatype. 
+
+
